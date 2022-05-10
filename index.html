@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SKPK Gadget</title>
+    </head>
+    <body>
+        <div id="produk">
+
+        </div>
+
+        <script src="PH.js"></script>
+
+        <script type="text/javascript">
+           let hasil = "";
+           for (index in Gadget) {
+                hasil += "<h1>"+Gadget[index].nama+"</h1>";
+                hasil += "<img src=' "+Gadget[index].foto+"' width='300'>";
+                hasil += "<h3> Rp. "+Number(Gadget[index].harga).toLocaleString("ID-id") +"</h3>";
+                hasil +="<button> masukkan ke keranjang</button><br><br>";
+            }
+                document.getElementById("produk").innerHTML = hasil;
+
+        </script> 
+    
+    </body>
+
+</html>
